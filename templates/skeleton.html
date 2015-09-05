@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<!--
+  Alpha by HTML5 UP
+  html5up.net | @n33co
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>XScheduler</title>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <meta name="description" content="" />
+      <meta name="keywords" content="" />
+      <!--[if lte IE 8]><script src="{{ url_for('static', filename='css/ie/html5shiv.js') }}"></script><![endif]-->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/skel.css') }}" />
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style-wide.css') }}" />
+      <script rel ="js" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script rel ="js" src="{{ url_for('static', filename='js/jquery.dropotron.min.js') }}"></script>
+    <script rel ="js" src="{{ url_for('static', filename='js/jquery.scrollgress.min.js') }}"></script>
+    <script rel ="js" src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
+    <script rel ="js" src="{{ url_for('static', filename='js/skel-layers.min.js') }}"></script>
+    <script rel ="js" src="{{ url_for('static', filename='js/init.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <!--[if lte IE 8]><link rel="stylesheet" href="{{ url_for('static', filename='css/ie/v8.css') }}" /><![endif]-->
+  </head>
+  <body>
+
+    <!-- Header -->
+      <header id="header" class="skel-layers-fixed">
+        <h1><a href="/">XScheduler</a> by Kiran Kurian</h1>
+        <nav id="nav">
+          <ul>
+            <li><a href="https://github.com/GrandmasterK/XScheduler">Github</a></li>
+          </ul>
+        </nav>
+      </header>
+
+    <!-- Main -->
+      <section id="main" class="container">
+        <header>
+          <h2>XScheduler</h2>
+          <h3>{{Main}}</h3>
+          <p>{{Second}}</p>
+        </header> 
+        <section class="box">
+          <center>{{content|safe}}</center>
+        </section>
+      </section>
+  </body>
+</html>
