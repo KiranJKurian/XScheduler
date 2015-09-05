@@ -28,7 +28,7 @@ def main(service, inputJSON):
 		start = event['start'].get('dateTime', event['start'].get('date'))
 		end = event['end'].get('dateTime', event['end'].get('date'))
 		print start, event['summary'], end
-		returnDict["events"].append("%s: %s  -  %s"%(event['summary'],start,end))
+		returnDict["events"].append("<b>%s</b><br>%s  <b>-</b>  %s<br>"%(event['summary'],start,end))
 	return json.dumps(returnDict)
   
 

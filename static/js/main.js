@@ -29,7 +29,7 @@ function authorize(){
     url: "/authorize",
     success: function (data) {
       console.log("Authorizing");
-      $('#title').html('<h3>Authorizing...</h3><h4>P.S. You will need to allow this popup to authorize you.</h4>');
+      $('#event').html('<h3>Authorizing...</h3><h4>P.S. You will need to allow this popup to authorize you.</h4>');
       if(data['url']){
         console.log("Going to url: "+data["url"]);
         localStorage.setItem(getName(),false);
@@ -43,7 +43,7 @@ function authorize(){
     data: JSON.stringify({id:name}),
     dataType: "json",
     error: function (xhr, ajaxOptions) {
-         $('#title').html('<h3>Ooopps, got an error...</h3>');
+         $('#event').html('<h3>Ooopps, got an error...</h3>');
          if(development){
            console.log(xhr.status);
            console.log(xhr.responseText);
